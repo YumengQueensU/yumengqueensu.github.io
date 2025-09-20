@@ -1,0 +1,79 @@
+.project-detail-container {
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* 顶部大图样式 */
+.hero-image {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 40px;
+}
+
+/* 内容部分整体更窄的内边距 */
+.intro-section,
+.content-section,
+.streamlit-embed {
+  max-width: 960px;
+  margin: 0 auto; /* 水平居中 */
+  padding: 0 40px; /* 左右内边距，适当缩进 */
+  box-sizing: border-box;
+}
+
+/* 简介部分排版 */
+.intro-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.main-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.sub-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 内容段落 */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+.content-section .text {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}
+.content-section .image {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}
+.content-section .image img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1; /* 保持正方形 */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* section-2 反转布局 */
+.section-2 {
+  flex-direction: row-reverse;
+}
+
+/* Streamlit 嵌入部分 */
+.streamlit-embed {
+  margin-top: 60px;
+  text-align: center;
+}
+.streamlit-embed h2 {
+  margin-bottom: 20px;
+}

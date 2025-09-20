@@ -1,0 +1,89 @@
+.skill-slider-container {
+  height: 100vh;
+  background-color: #F8EFEA;
+  overflow: hidden;
+  position: relative;
+  padding-left: 5%;  /* Increased left padding */
+  padding-right: 5%;  /* Increased right padding */
+  padding-top: 5%;    /* Top internal padding */
+  padding-bottom: 5%; /* Bottom internal padding */
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-title-container {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-title, .project-title {
+  margin-top: 10px;
+}
+
+.project-content-container {
+  height: 75%;
+  display: flex;
+}
+
+.image-container {
+  width: 50%;
+  padding: 3%;  /* Padding adjusted to ensure image doesn't touch the sides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.feature-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  height: 400%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 24px;
+  opacity: 1;  /* Button always visible */
+  transition: opacity 0.3s ease;
+}
+
+.left-arrow {
+  left: 1px; /* Ensure it's within visible area */
+}
+
+.right-arrow {
+  right: 1px; /* Ensure it's within visible area */
+}
+
+/* Shadow effect only on the left and right sides */
+.skill-slider-container:hover {
+  box-shadow: 
+    inset -100px 0 100px -75px rgba(0,0,0,0.75), 
+    inset 100px 0 100px -75px rgba(0,0,0,0.75);
+}

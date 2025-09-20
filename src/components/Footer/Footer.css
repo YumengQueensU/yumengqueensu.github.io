@@ -1,0 +1,56 @@
+.footer-container {
+    color: #ffffff;
+    background-color: #072A40;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 40px;
+  }
+  
+  .upper-section {
+    display: flex;
+    height: 40%;
+  }
+  
+  .contact-info {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-info > div {
+    width: 35%;
+    cursor: pointer;
+  }
+  
+  .contact-info p:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links a {
+    color: white; /* 确保链接颜色与背景色配合 */
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .empty-space {
+    width: 40%;
+    /* future content space */
+  }
+  
+  .lower-section {
+    height: 40%;
+    text-align: center;
+  }
+  
+  .lower-section hr {
+    margin: 40px 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #fff, transparent);
+  }
+  

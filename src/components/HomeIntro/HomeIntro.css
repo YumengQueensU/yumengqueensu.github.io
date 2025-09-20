@@ -1,0 +1,12 @@
+.HomeIntro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #f6f4e8 70%, #bacec1 30%);
+    padding: 40px;
+    text-align: center;
+  }
+  

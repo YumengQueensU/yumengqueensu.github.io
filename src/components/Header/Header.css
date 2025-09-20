@@ -1,0 +1,10 @@
+.Header {
+    transition: background-color 0.3s ease;
+  }
+  
+  .Header-scrolled {
+    background-color: #22272d; /* 滚动时的深蓝色 */
+  }
+  .projects-submenu {
+    background-color: #A3B4C8; /* 设置子菜单背景色 */
+}

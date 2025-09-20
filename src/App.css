@@ -1,0 +1,22 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantaloupe', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F8EFEA; /* 浅灰色背景 */
+  color: #333; /* 深灰色文字 */
+}
+
+h1, h2, h3, p {
+  margin: 16px 20px;
+}
+
+/* 顶部菜单栏样式 */
+.Menu {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
