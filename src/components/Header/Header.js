@@ -37,7 +37,9 @@ const Header = () => {
           ))}
         </Menu.SubMenu>
         <Menu.Item key="cv" style={{ color: textColor }}>
-          <Link to="../public/docs/CV-Yumeng_Si.pdf" smooth={true} duration={500}>My Resume</Link>
+          <a href="/docs/CV-Yumeng_Si.pdf" target="_blank" rel="noopener noreferrer" style={{ color: textColor }}>
+            My Resume
+          </a>
         </Menu.Item>
       </Menu>
     </Affix>
