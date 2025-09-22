@@ -36,6 +36,9 @@ const Header = () => {
             </Menu.Item>
           ))}
         </Menu.SubMenu>
+        <Menu.Item key="cv" style={{ color: textColor }}>
+          <Link to="../public/docs/CV-Yumeng_Si.pdf" smooth={true} duration={500}>My Resume</Link>
+        </Menu.Item>
       </Menu>
     </Affix>
   );
