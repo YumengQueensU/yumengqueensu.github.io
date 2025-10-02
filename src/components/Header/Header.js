@@ -28,7 +28,7 @@ const Header = () => {
           <Link to="homeIntro" smooth={true} duration={500}>Home</Link>
         </Menu.Item>
         <Menu.SubMenu key="projects" title={<span style={{ color: textColor }}>Projects</span>}>
-          {['Full Stack Development', 'Game Development', 'AI Engineering'].map((skill, index) => (
+          {['Game Development', 'Full Stack Development','AI Engineering'].map((skill, index) => (
             <Menu.Item key={index}>
               <Link to={skill.toLowerCase().replace(/\s/g, '')} smooth={true} duration={500}>
                 {skill}

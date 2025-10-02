@@ -1,12 +1,87 @@
-.HomeIntro {
-    height: 100vh;
-    display: flex;
+.home-intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 60px 10%;
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #f6f4e8 75%, #bacec1 25%);
+  position: relative;
+}
+
+.home-intro-left {
+  flex: 1;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.home-intro-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 20px;
+  position: relative;
+
+}
+
+.image-stack {
+  position: relative;
+  width: 560px;
+  height: 440px;
+  margin-top: 100px; /* ⭐ 向下移动整个图片区域 */
+}
+
+.image-stack img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-top {
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.image-bottom {
+  top: 80px;   /* ⭐ 更小的重叠 */
+  left: 220px;
+  z-index: 1;
+}
+
+/* ✅ 响应式兼容小屏幕 */
+@media screen and (max-width: 768px) {
+  .home-intro-container {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: #ffffff;
-    background: linear-gradient(to bottom, #f6f4e8 70%, #bacec1 30%);
-    padding: 40px;
+    padding: 40px 5%;
+  }
+
+  .home-intro-left,
+  .home-intro-right {
+    width: 100%;
     text-align: center;
   }
+
   
+  .image-stack {
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-stack img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-bottom {
+    top: 10px;
+    left: 10px;
+  }
+}

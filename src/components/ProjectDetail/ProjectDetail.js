@@ -17,49 +17,35 @@ const ProjectDetail = () => {
 
   return (
     <div className="project-detail-container">
-      {/* 顶部大图 */}
-      <div
-        className="hero-image"
-        style={{ backgroundImage: `url(${project.coverImg})` }}
-      />
-
-      {/* 简介部分 */}
+      {/* 首部图片：直接使用 img 标签，在 CSS 中设置 1210px x 30vh 居中 */}
+      <img className="hero-img" src={project.coverImg} alt={project.introTitle} />
+      
+      {/* 简介 */}
       <div className="intro-section">
         <h1 className="main-title">{project.introTitle}</h1>
         <p className="sub-description">{project.introSubtitle}</p>
       </div>
 
-      {/* 内容段落：交错布局 */}
-      {project.sections.map((section, index) => (
-        <div
-          className={`content-section ${section.reverse ? 'reverse' : ''}`}
-          key={index}
-        >
-          <div className="text">
-            {section.paragraphs.map((p, idx) => (
-              <p key={idx}>{p}</p>
-            ))}
-          </div>
-          <div className="image">
-            <img src={section.img} alt={`Section ${index + 1}`} />
-          </div>
-        </div>
-      ))}
+      {/* 内容段落：第 2 段强制左图右文 */}
+      {project.sections.map((section, index) => {
+        const classes = [
+          'content-section',
+          index === 1 ? 'force-image-left' : (section.reverse ? 'reverse' : '')
+        ].filter(Boolean).join(' ');
 
-      {/* 嵌套 Streamlit 页面 */}
-      {projectId === "marketplace" && (
-        <div className="streamlit-embed">
-          <h2>Interactive Portfolio Demo</h2>
-          <iframe
-            src="https://portfolio-optimisation-tmszbfem5wq8sqlvqbmb9c.streamlit.app/"
-            width="100%"
-            height="800"
-            frameBorder="0"
-            allow="fullscreen"
-            title="Portfolio Streamlit App"
-          ></iframe>
-        </div>
-      )}
+        return (
+          <div className={classes} key={index}>
+            <div className="text">
+              {section.paragraphs.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
+            <div className="image">
+              <img src={section.img} alt={`Section ${index + 1}`} />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
